@@ -40,6 +40,10 @@ li {
   padding-bottom: 15px;
 }
 
+.weather-temperature {
+  margin-bottom: 10px;
+}
+
 .weather-temperature img {
   height: 60px;
   margin-top: unset;
@@ -71,6 +75,8 @@ li {
 }
 
 .weather-forecast {
+  text-align: center;
   border: 1px solid #f9f7fe;
   margin: 0 auto;
+  padding-bottom: 50px;
 }
