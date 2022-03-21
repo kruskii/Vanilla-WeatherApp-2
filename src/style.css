@@ -100,9 +100,16 @@ footer {
   text-align: center;
   border: 1px solid #f9f7fe;
   margin: 20px 0px 10px;
-  padding-bottom: 50px;
   background: #f9f7fe;
   border-radius: 5px;
+}
+
+.temp-high {
+  font-weight: 700;
+}
+
+.forecast img {
+  width: 48px;
 }
 
 .weather-details {
