@@ -4,8 +4,8 @@ body {
 }
 
 h1 {
-  color: #70757a;
-  font-size: 24px;
+  color: #fff;
+  font-size: 30px;
   line-height: 26px;
   font-weight: 400;
   margin-bottom: 0;
@@ -43,9 +43,19 @@ footer {
 }
 
 .overview {
-  margin: 10px 0 20px;
+  margin: 20px 0;
   border-bottom: 1px solid #f9f7fe;
   padding-bottom: 15px;
+}
+
+.row .overview {
+  background-color: #885df1;
+  padding-top: 15px;
+  border-radius: 3px;
+}
+
+.current-time {
+  font-size: 18px;
 }
 
 .weather-temperature {
@@ -88,6 +98,8 @@ footer {
   border: 1px solid #f9f7fe;
   margin: 20px 0px 10px;
   padding-bottom: 50px;
+  background: #f9f7fe;
+  border-radius: 5px;
 }
 
 .weather-details {
@@ -96,19 +108,20 @@ footer {
 
 .col-8 {
   flex: 0 0 75%;
-  max-width: 60%;
-  padding: 0 10px;
+  max-width: 63%;
+  padding: 0 10px 0 15px;
 }
 
 .col-2 {
   padding: 0;
   margin: 0;
+  max-width: 23%;
 }
 
 .search-input {
   background: #f9f7fe;
   border: none;
-  padding: 6px 10px;
+  padding: 6px 10px 6px 10px;
   display: inline-block;
   border-radius: 6px;
   color: rgba(39, 33, 66, 0.4);
