@@ -17,6 +17,19 @@
     <div class="container">
       <div class="weather-app-wrapper">
         <div class="weather-app">
+          <form>
+            <div class="row">
+              <div class="col-8">
+                <input type="search" placeholder="Enter a city" class="form-control search-input">
+              </div>
+              <div class="col-2">
+                <input type="submit" class="btn btn-primary" value="Search">
+              </div>
+              <div class="col-2">
+                <input type="submit" class="btn btn-success" value="Current" >
+              </div>
+            </div>
+          </form>
           <div class="overview">
             <h1>New York</h1>
             <ul>
@@ -38,7 +51,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-6">
+              <div class="col-6 weather-details">
                 <ul>
                   <li>Precipitation 91%</li>
                   <li>Humidity 90%</li>
@@ -46,7 +59,8 @@
                 </ul>
               </div>
             </div>
-            <div class="row weather-forecast">
+            <div class="forecast">
+              <div class="row">
               <div class="col">
                 <div class="forecast-time">Mon</div>
               </div>
@@ -62,15 +76,15 @@
               <div class="col">
                 <div class="forecast-time">Fri</div>
               </div>
+              </div>
             </div>
-          </div>
-           <small>
-          <a
-            href="https://github.com/kruskii/Vanilla-WeatherApp-2"
+             <small>
+          <a href="https://github.com/kruskii/Vanilla-WeatherApp-2"
             target="_blank"
             >Open Source Code </a
           >by Kruskaya Molina
-        </small>
+           </small>
+          </div>
         </div>
       </div>
     </div>
