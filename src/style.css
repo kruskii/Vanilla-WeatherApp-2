@@ -26,6 +26,7 @@ li {
 
 footer {
   text-align: center;
+  font-size: 12px;
 }
 
 .weather-app-wrapper {
@@ -105,7 +106,7 @@ footer {
 }
 
 .weather-details {
-  padding-top: 10px;
+  padding-top: 65px;
 }
 
 .col-8 {
