@@ -10,7 +10,9 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+
     <link rel="stylesheet" href="src/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <title>Weather App</title>
   </head>
   <body>
@@ -36,9 +38,8 @@
           </form>
           <div class="row">
             <div class="overview">
-              <h1 class="city">
-                New York <span class="current-time"> As of 05:00pm </span>
-              </h1>
+              <h1 class="city" id="city">New York</h1>
+              <div class="current-time">As of 05:00pm</div>
             </div>
           </div>
           <div class="row">
@@ -50,7 +51,7 @@
                   class="float-left"
                 />
                 <div class="float-left temperature">
-                  <strong>12</strong>
+                  <strong id="temperature">12</strong>
                   <small class="units">
                     <span class="celsius">°C </span> |
                     <span class="farenheit">°F</span>
