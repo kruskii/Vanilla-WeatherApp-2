@@ -33,3 +33,10 @@ let city = `Houston`;
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
 axios.get(apiUrl).then(showCity);
+
+document.querySelector("#toggle").addEventListener("click", toggleResult);
+
+function toggleResult() {
+  let toggleElement = document.querySelector(".toggle-btn");
+  toggleElement.classList.toggle(".active");
+}

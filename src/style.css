@@ -1,3 +1,10 @@
+*.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 body {
   font-family: Google Sans, arial, sans-serif;
   background: #f9f7fe;
@@ -90,6 +97,7 @@ footer {
   font-size: 50px;
   font-weight: 400;
   line-height: 1;
+  position: relative;
 }
 
 .temperature .units {
@@ -162,4 +170,35 @@ footer {
 
 .description {
   text-transform: capitalize;
+}
+
+.row .toggle {
+  margin: 20px;
+}
+
+.toggle-btn {
+  width: 50px;
+  height: 25px;
+  background: #f9f7fe;
+  border-radius: 30px;
+  border: 1px solid #885df1;
+  padding: 5px;
+  transition: all 300ms ease-in-out;
+}
+.toggle-btn > .inner-circle {
+  width: 20px;
+  height: 20px;
+  background: #885df1;
+  border-radius: 50%;
+  transition: all 300ms ease-in-out;
+  position: relative;
+  bottom: 3.5px;
+}
+
+.toggle-btn.active {
+  background: #885df1;
+}
+.toggle-btn.active > .inner-circle {
+  margin-left: 20px;
+  background: #fff;
 }
