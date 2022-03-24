@@ -71,10 +71,10 @@ footer {
 }
 
 .weather-temperature img {
-  height: 60px;
+  height: 100px;
   margin-top: unset;
   vertical-align: top;
-  width: 60px;
+  width: 100px;
   float: left;
 }
 
