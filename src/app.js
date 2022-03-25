@@ -4,7 +4,8 @@
 
 //function that shows default city value
 
-function showCity(response) {
+function showDefaultCity(response) {
+  console.log(response);
   let cityElement = document.querySelector("#city");
   let temperatureElement = document.querySelector("#temperature");
   let windElement = document.querySelector("#wind");
@@ -28,15 +29,32 @@ function showCity(response) {
   );
 }
 
-let apiKey = `d956b0842cbabf1d3e0333b095cbca8d`;
-let city = `Houston`;
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-
-axios.get(apiUrl).then(showCity);
-
-document.querySelector("#toggle").addEventListener("click", toggleResult);
-
-function toggleResult() {
-  let toggleElement = document.querySelector(".toggle-btn");
-  toggleElement.classList.toggle(".active");
+function convertToFarenheit(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  let temperature = temperatureElement.innerHTML;
+  temperatureElement.innerHTML = Math.round((temperature * 9) / 5 + 32);
 }
+
+function convertToCelsius(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  let temperature = temperatureElement.innerHTML;
+  temperatureElement.innerHTML = Math.round(((temperature - 32) * 5) / 9);
+}
+
+//Show default city weather feature
+
+let apiKey = `d956b0842cbabf1d3e0333b095cbca8d`;
+let city = `Los Angeles`;
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+axios.get(apiUrl).then(showDefaultCity);
+
+//Convert temperature to farenheit feature
+
+let farenheitLink = document.querySelector("#farenheit-link");
+farenheitLink.addEventListener("click", convertToFarenheit);
+
+//Convert to temperature to celsius feature
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", convertToCelsius);
