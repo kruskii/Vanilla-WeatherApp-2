@@ -19,13 +19,14 @@
     <div class="container">
       <div class="weather-app-wrapper">
         <div class="weather-app">
-          <form>
+          <form id="search-form">
             <div class="row">
               <div class="col-8">
                 <input
                   type="search"
                   placeholder="Enter a city"
                   class="form-control search-input"
+                  id="city-input"
                 />
               </div>
               <div class="col-2">
@@ -54,12 +55,7 @@
           <div class="row">
             <div class="col-8">
               <div class="clearfix weather-temperature">
-                <img
-                  src="https://ssl.gstatic.com/onebox/weather/64/rain_light.png"
-                  alt="Light rain"
-                  class="float-left"
-                  id="icon"
-                />
+                <img src=" " alt="Light rain" class="float-left" id="icon" />
                 <div class="float-left temperature">
                   <strong id="temperature">12</strong>
                   <small class="units">
