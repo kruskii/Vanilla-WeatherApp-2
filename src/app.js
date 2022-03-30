@@ -113,6 +113,33 @@ function searchCity(event) {
   axios.get(apiUrl).then(showCity);
 }
 
+// add html forecast feature
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Wed", "Thurs", "Fri", "Sat"];
+
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      ` <div class="col">
+                <div class="forecast-time">${day}</div>
+                <img
+                  src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+                  alt="sunny"
+                />
+                <div class="forecast-temp">
+                  <span class="temp-high">11°</span> 1°
+                </div>
+          </div>
+              `;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", searchCity);
 
@@ -217,3 +244,5 @@ let currentDate = new Date();
 console.log(currentDate);
 let dateElement = document.querySelector("#current-time");
 dateElement.innerHTML = formatDate(currentDate);
+
+displayForecast();
