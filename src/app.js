@@ -14,14 +14,21 @@ function showDefaultCity(response) {
   let maxTempElement = document.querySelector("#max-temp");
   let minTempElement = document.querySelector("#min-temp");
   let iconElement = document.querySelector("#icon");
+
+  celsiusTemperature = response.data.main.temp;
+  feelsLikeTemperature = response.data.main.feels_like;
+  maxTemperature = response.data.main.temp_max;
+  console.log(response);
+  minTemperature = response.data.main.temp_min;
+
   cityElement.innerHTML = response.data.name;
-  temperatureElement.innerHTML = Math.round(response.data.main.temp);
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
   windElement.innerHTML = Math.round(response.data.wind.speed);
   descriptionElement.innerHTML = response.data.weather[0].description;
-  feelsLikeElement.innerHTML = Math.round(response.data.main.feels_like);
+  feelsLikeElement.innerHTML = Math.round(feelsLikeTemperature);
   humidityElement.innerHTML = response.data.main.humidity;
-  maxTempElement.innerHTML = Math.round(response.data.main.temp_max);
-  minTempElement.innerHTML = Math.round(response.data.main.temp_min);
+  maxTempElement.innerHTML = Math.round(maxTemperature);
+  minTempElement.innerHTML = Math.round(minTemperature);
   iconElement.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
@@ -40,8 +47,10 @@ function convertToFarenheit(event) {
   let feelsLike = Math.round((feelsLikeTemperature * 9) / 5 + 32);
   let maxTemp = Math.round((maxTemperature * 9) / 5 + 32);
   let minTemp = Math.round((minTemperature * 9) / 5 + 32);
+
   celsiusLink.classList.remove("active");
   farenheitLink.classList.add("active");
+
   temperatureElement.innerHTML = farenheitTemperature;
   feelsLikeElement.innerHTML = feelsLike;
   maxTempElement.innerHTML = maxTemp;
