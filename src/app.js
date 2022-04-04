@@ -1,39 +1,5 @@
 //add API integration, connect to OpenWeather App
 
-//function that shows default city value
-
-function displayTemperature(response) {
-  let cityElement = document.querySelector("#city");
-  let temperatureElement = document.querySelector("#temperature");
-  let windElement = document.querySelector("#wind");
-  let descriptionElement = document.querySelector("#description");
-  let feelsLikeElement = document.querySelector("#feels-like");
-  let humidityElement = document.querySelector("#humidity");
-  let maxTempElement = document.querySelector("#max-temp");
-  let minTempElement = document.querySelector("#min-temp");
-  let iconElement = document.querySelector("#icon");
-
-  celsiusTemperature = response.data.main.temp;
-  feelsLikeTemperature = response.data.main.feels_like;
-  maxTemperature = response.data.main.temp_max;
-  console.log(response);
-  minTemperature = response.data.main.temp_min;
-
-  cityElement.innerHTML = response.data.name;
-  temperatureElement.innerHTML = Math.round(celsiusTemperature);
-  windElement.innerHTML = Math.round(response.data.wind.speed);
-  descriptionElement.innerHTML = response.data.weather[0].description;
-  feelsLikeElement.innerHTML = Math.round(feelsLikeTemperature);
-  humidityElement.innerHTML = response.data.main.humidity;
-  maxTempElement.innerHTML = Math.round(maxTemperature);
-  minTempElement.innerHTML = Math.round(minTemperature);
-  iconElement.setAttribute(
-    "src",
-    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
-  );
-  getForecast(response.data.coord);
-}
-
 //convert temperature feature
 
 function convertToFarenheit(event) {
@@ -86,7 +52,6 @@ function formatDay(timestamp) {
 
 function displayForecast(response) {
   let forecast = response.data.daily;
-  console.log(response);
 
   let forecastElement = document.querySelector("#forecast");
 
@@ -121,9 +86,41 @@ function displayForecast(response) {
 // get the city coordinates and send to API to get the next 5 days of weather
 
 function getForecast(coordinates) {
-  console.log(coordinates);
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&units=metric&appid=${apiKey}`;
   axios.get(apiUrl).then(displayForecast);
+}
+
+//displays temperature
+
+function displayTemperature(response) {
+  let cityElement = document.querySelector("#city");
+  let temperatureElement = document.querySelector("#temperature");
+  let windElement = document.querySelector("#wind");
+  let descriptionElement = document.querySelector("#description");
+  let feelsLikeElement = document.querySelector("#feels-like");
+  let humidityElement = document.querySelector("#humidity");
+  let maxTempElement = document.querySelector("#max-temp");
+  let minTempElement = document.querySelector("#min-temp");
+  let iconElement = document.querySelector("#icon");
+
+  celsiusTemperature = response.data.main.temp;
+  feelsLikeTemperature = response.data.main.feels_like;
+  maxTemperature = response.data.main.temp_max;
+  minTemperature = response.data.main.temp_min;
+
+  cityElement.innerHTML = response.data.name;
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+  windElement.innerHTML = Math.round(response.data.wind.speed);
+  descriptionElement.innerHTML = response.data.weather[0].description;
+  feelsLikeElement.innerHTML = Math.round(feelsLikeTemperature);
+  humidityElement.innerHTML = response.data.main.humidity;
+  maxTempElement.innerHTML = Math.round(maxTemperature);
+  minTempElement.innerHTML = Math.round(minTemperature);
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  getForecast(response.data.coord);
 }
 
 // send city input to the API
