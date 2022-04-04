@@ -31,7 +31,7 @@ footer {
 }
 
 .weather-app-wrapper {
-  max-width: 600px;
+  max-width: 550px;
   margin: 30px auto;
 }
 
@@ -76,6 +76,9 @@ footer {
   vertical-align: top;
   width: 100px;
   float: left;
+  position: relative;
+  bottom: 23px;
+  right: 10px;
 }
 
 .temperature {
@@ -146,17 +149,6 @@ footer {
   line-height: 20px;
 }
 
-.btn {
-  background: #885df1;
-  font-weight: 700;
-  font-size: 16px;
-  padding: 6px 10px;
-  border: none;
-  height: 50px;
-  width: 100%;
-  line-height: 20px;
-}
-
 .btn-success {
   margin: 0 0 0 5px;
 }
@@ -176,4 +168,50 @@ footer {
 
 .temperature .active:hover {
   text-decoration: none;
+}
+
+.fa-location-arrow {
+  color: #f9f7fe;
+  padding: 10px;
+  border: 1px solid #885df1;
+  border-radius: 10px;
+  background-color: #885df1;
+  display: inline;
+}
+
+.fa-location-arrow:hover {
+  color: #885df1;
+  border: 1px solid #885df1;
+  border-radius: 10px;
+  background-color: #f9f7fe;
+}
+
+.fa-search {
+  color: #f9f7fe;
+  padding: 10px;
+  border: 1px solid #885df1;
+  border-radius: 10px;
+  background-color: #885df1;
+  position: relative;
+  top: -9px;
+  display: inline;
+  position: relative;
+  top: -3px;
+}
+
+.fa-search:hover {
+  color: #885df1;
+  border: 1px solid #885df1;
+  border-radius: 10px;
+  background-color: #f9f7fe;
+}
+
+.btn {
+  display: inline;
+  padding: 3px;
+}
+
+.btn:focus {
+  outline: none;
+  box-shadow: none;
 }
