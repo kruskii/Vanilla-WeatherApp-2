@@ -192,6 +192,9 @@ footer {
   border: 1px solid #885df1;
   border-radius: 10px;
   background-color: #f9f7fe;
+  cursor: pointer;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
 .fa-search {
