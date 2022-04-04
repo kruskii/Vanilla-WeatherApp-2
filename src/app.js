@@ -188,7 +188,7 @@ function formatDate(now) {
   console.log(minutes);
   console.log(date);
 
-  return `As of ${date} at ${hours}:${minutes}`;
+  return `Last updated: ${date} at ${hours}:${minutes}`;
 }
 
 let currentDate = new Date();

@@ -38,32 +38,15 @@
                 </button>
                 <i class="fas fa-location-arrow fa-lg" id="current-button"></i>
               </div>
-              <!-- <div class="col-1.5">
-                <!-- <button
-                  type="submit"
-                  class="btn btn-success"
-                  value="Current Location"
-                  id="current-button"
-                >
-                  Current Location
-                </button>
-              </div> -->
             </div>
           </form>
           <div class="row">
             <div class="overview">
               <h1 class="city" id="city"></h1>
-              <div class="current-time" id="current-time"></div>
             </div>
           </div>
           <div class="row">
-            <div
-              class="toggle-btn"
-              id="toggle"
-              onclick="this.classList.toggle('active')"
-            >
-              <div class="inner-circle"></div>
-            </div>
+            <div class="current-time" id="current-time"></div>
           </div>
           <div class="row">
             <div class="col-8">
@@ -76,7 +59,7 @@
                     <a href="#" id="farenheit-link">°F</a>
                   </small>
                 </div>
-                <ul>
+                <ul class="float-left">
                   <li class="description" id="description">Clear</li>
                   <li>
                     Feels like <span id="feels-like">13</span>
@@ -103,8 +86,16 @@
           </div>
           <div class="forecast" id="forecast"></div>
           <footer>
+            <div>
+              Powered by
+              <a
+                href="https://openweathermap.org/
+            "
+                target="_blank"
+                >OpenWeatherMap
+              </a>
+            </div>
             Coded by Kruskaya Molina 👩🏻‍💻 - Open-Source Code on
-
             <a
               href="https://github.com/kruskii/Vanilla-WeatherApp-2"
               target="_blank"
