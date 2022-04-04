@@ -17,9 +17,9 @@ function convertToFarenheit(event) {
   farenheitLink.classList.add("active");
 
   temperatureElement.innerHTML = farenheitTemperature;
-  feelsLikeElement.innerHTML = feelsLike;
-  maxTempElement.innerHTML = maxTemp;
-  minTempElement.innerHTML = minTemp;
+  feelsLikeElement.innerHTML = `${feelsLike}°F`;
+  maxTempElement.innerHTML = `${maxTemp}°F`;
+  minTempElement.innerHTML = `${minTemp}°F`;
 }
 
 function convertToCelsius(event) {
@@ -33,9 +33,9 @@ function convertToCelsius(event) {
   farenheitLink.classList.remove("active");
 
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
-  feelsLikeElement.innerHTML = Math.round(feelsLikeTemperature);
-  maxTempElement.innerHTML = Math.round(maxTemperature);
-  minTempElement.innerHTML = Math.round(minTemperature);
+  feelsLikeElement.innerHTML = `${Math.round(feelsLikeTemperature)}°C`;
+  maxTempElement.innerHTML = `${Math.round(maxTemperature)}°C`;
+  minTempElement.innerHTML = `${Math.round(minTemperature)}°C`;
 }
 
 // format the dt. timestamp response for each forecast day
@@ -112,10 +112,10 @@ function displayTemperature(response) {
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
   windElement.innerHTML = Math.round(response.data.wind.speed);
   descriptionElement.innerHTML = response.data.weather[0].description;
-  feelsLikeElement.innerHTML = Math.round(feelsLikeTemperature);
-  humidityElement.innerHTML = response.data.main.humidity;
-  maxTempElement.innerHTML = Math.round(maxTemperature);
-  minTempElement.innerHTML = Math.round(minTemperature);
+  feelsLikeElement.innerHTML = `${Math.round(feelsLikeTemperature)}°C`;
+  humidityElement.innerHTML = `${response.data.main.humidity}%`;
+  maxTempElement.innerHTML = `${Math.round(maxTemperature)}°C`;
+  minTempElement.innerHTML = `${Math.round(minTemperature)}°C`;
   iconElement.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`

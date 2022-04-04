@@ -215,3 +215,7 @@ footer {
   outline: none;
   box-shadow: none;
 }
+
+li i {
+  padding: 5px;
+}
