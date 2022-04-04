@@ -1,15 +1,17 @@
 body {
-  font-family: Google Sans, arial, sans-serif;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 200;
   background: #f9f7fe;
 }
 
 h1 {
   color: #fff;
-  font-size: 30px;
+  font-size: 34px;
   line-height: 26px;
   font-weight: 400;
   margin-bottom: 0;
   float: left;
+  font-family: "Send Flowers", cursive;
 }
 
 ul {
@@ -28,6 +30,7 @@ li {
 footer {
   text-align: center;
   font-size: 12px;
+  line-height: 20px;
 }
 
 .weather-app-wrapper {
@@ -47,7 +50,7 @@ footer {
 .overview {
   margin: 20px 0 10px;
   border-bottom: 1px solid #f9f7fe;
-  padding-bottom: 15px;
+  padding-bottom: 5px;
 }
 
 .row .overview {
@@ -62,6 +65,7 @@ footer {
   display: inline-block;
   padding-left: 5px;
   padding-top: 3px;
+  font-family: "Send Flowers", cursive;
 }
 
 .weather-temperature {
@@ -101,15 +105,20 @@ footer {
   position: relative;
   top: -25px;
   left: -10px;
+  font-weight: 400;
 }
 
 .forecast {
   text-align: center;
   border: 1px solid #f9f7fe;
-  margin: 20px 0px 10px;
+  margin: 10px 0px;
   background: #f9f7fe;
   border-radius: 5px;
   padding: 10px 0;
+}
+
+.forecast-time {
+  font-weight: 400;
 }
 
 .temp-high {
