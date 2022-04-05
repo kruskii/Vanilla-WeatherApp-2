@@ -38,7 +38,7 @@ function convertToCelsius(event) {
   minTempElement.innerHTML = `${Math.round(minTemperature)}°C`;
 }
 
-// format the dt. timestamp response for each forecast day
+// format the dt. timestamp response for each forecast day which is used in the displayforecast function
 
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
@@ -48,7 +48,7 @@ function formatDay(timestamp) {
   return days[day];
 }
 
-// add html to display the next 5 days weather foreacast
+// injects html to display the next 5 days weather foreacast
 
 function displayForecast(response) {
   let forecast = response.data.daily;
@@ -93,6 +93,7 @@ function getForecast(coordinates) {
 //displays temperature
 
 function displayTemperature(response) {
+  console.log(response);
   let cityElement = document.querySelector("#city");
   let temperatureElement = document.querySelector("#temperature");
   let windElement = document.querySelector("#wind");
@@ -110,7 +111,7 @@ function displayTemperature(response) {
 
   cityElement.innerHTML = response.data.name;
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
-  windElement.innerHTML = Math.round(response.data.wind.speed);
+  windElement.innerHTML = `${Math.round(response.data.wind.speed)} km/h`;
   descriptionElement.innerHTML = response.data.weather[0].description;
   feelsLikeElement.innerHTML = `${Math.round(feelsLikeTemperature)}°C`;
   humidityElement.innerHTML = `${response.data.main.humidity}%`;
@@ -225,5 +226,5 @@ let city = `Los Angeles`;
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 //axios.get(apiUrl).then(showDefaultCity);
 
-// Initalzing display city
+// Initalizing display city
 search("New York");

@@ -56,7 +56,7 @@ footer {
 .row .overview {
   background-color: #885df1;
   padding: 10px 10px;
-  border-radius: 3px;
+  border-radius: 8px;
   max-width: 100%;
 }
 
@@ -70,7 +70,7 @@ footer {
 
 .weather-temperature {
   margin: 20px 0;
-  border-right: 1px solid blue;
+  border-right: 1px solid #885df1;
 }
 
 .weather-temperature img {
@@ -113,7 +113,7 @@ footer {
   border: 1px solid #f9f7fe;
   margin: 10px 0px;
   background: #f9f7fe;
-  border-radius: 5px;
+  border-radius: 10px;
   padding: 10px 0;
 }
 
@@ -127,6 +127,8 @@ footer {
 
 .forecast img {
   width: 70px;
+  background-color: white;
+  border-radius: 15px;
 }
 
 .weather-details {
@@ -230,6 +232,7 @@ footer {
 li i {
   padding: 5px;
   color: #885df1;
+  font-size: 18px;
 }
 
 .weather-details li {
